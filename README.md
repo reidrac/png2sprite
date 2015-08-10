@@ -2,7 +2,7 @@ png2scr.py
 ==========
 
 This is a simple tool to convert a 24 or 32 bit PNG image to
-ZX Spectrum sprite to be uses with SP1 library.
+ZX Spectrum sprite to be used with SP1 library.
 
 For example:
 ```
