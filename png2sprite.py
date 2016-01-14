@@ -111,7 +111,7 @@ def main():
  */
 """ % (args.image, w, h,))
 
-    print("""uchar %s[] = {\n%s\n};""" % (args.id, out,))
+    print("""const uchar %s[] = {\n%s\n};""" % (args.id, out,))
 
 if __name__ == "__main__":
     main()
