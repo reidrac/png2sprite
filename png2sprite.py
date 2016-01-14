@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
 png2sprite.py
-Copyright (C) 2015 by Juan J. Martinez - usebox.net
+Copyright (C) 2014-2016 by Juan J. Martinez - usebox.net
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,7 +36,7 @@ COLORS = [INK, PAPER, MASK,]
 def main():
 
     parser = ArgumentParser(description="png2sprite",
-                            epilog="Copyright (C) 2015 Juan J Martinez <jjm@usebox.net>",
+                            epilog="Copyright (C) 2014-2016 Juan J Martinez <jjm@usebox.net>",
                             )
 
     parser.add_argument("--version", action="version", version="%(prog)s "  + __version__)
