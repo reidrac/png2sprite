@@ -17,6 +17,16 @@ The colors used are:
  * paper: red (rgb 205, 0, 0)
  * mask: black (rgb 0, 0, 0)
 
+When including several sprites in your project, SP1 will need padding before and after each sprite. If the sprites are put one after the other, you'll only need to add padding before the first included one like this:
+
+```
+// assuming masked sprites
+const uchar sprite_pad[] = { 0xff, 0x0, 0xff, 0x0, 0xff, 0x0, 0xff, 0x0 };
+#include "sprite1.h"
+#include "sprite2.h"
+...
+```
+
 
 Requirements
 ------------
