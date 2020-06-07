@@ -31,7 +31,8 @@ INK = (205, 205, 205)
 PAPER = (205, 0, 0)
 MASK = (0, 0, 0)
 
-COLORS = [INK, PAPER, MASK,]
+COLORS = [INK, PAPER, MASK, ]
+
 
 def main():
 
@@ -39,7 +40,8 @@ def main():
                             epilog="Copyright (C) 2014-2016 Juan J Martinez <jjm@usebox.net>",
                             )
 
-    parser.add_argument("--version", action="version", version="%(prog)s "  + __version__)
+    parser.add_argument("--version", action="version",
+                        version="%(prog)s " + __version__)
     parser.add_argument("-i", "--id", dest="id", default="sprite", type=str,
                         help="variable name (default: sprite)")
 
@@ -61,10 +63,11 @@ def main():
         parser.error("%r size is not multiple of 8" % args.image)
 
     if not isinstance(image.getpixel((0, 0)), tuple):
-        parse.error("only RGB(A) images are supported")
+        parser.error("only RGB(A) images are supported")
 
     # so we support both RGB and RGBA images
-    data = list(zip(list(image.getdata(0)), list(image.getdata(1)), list(image.getdata(2))))
+    data = list(zip(list(image.getdata(0)), list(
+        image.getdata(1)), list(image.getdata(2))))
 
     for c in data:
         if c not in COLORS:
@@ -113,6 +116,6 @@ def main():
 
     print("""const uchar %s[] = {\n%s\n};""" % (args.id, out,))
 
+
 if __name__ == "__main__":
     main()
-
